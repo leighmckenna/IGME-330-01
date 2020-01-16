@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>HW 1</title>
+</head>
+
+<style>
+    .button {
+        height: 50px;
+        width: 100px;
+        
+    }
+</style>
+<body>
+    <button>Confirm</button>
+    <input id="firstName" placeholder="Type in your first name">
+    <input id="lastName" placeholder="Type in your last name">
+    <p id="output"></p> 
+</body>
+<script>
+    let button = document.querySelector("button");
+    
+    function greet(){
+        console.log("greet");
+        let firstName = document.querySelector("#firstName").value;
+        let lastName = document.querySelector("#lastName").value;
+        let output = document.querySelector("#output");
+        output.innerHTML =  "Hello " + firstName + " " + lastName;
+    }
+
+    button.onclick = greet;
+    document.getElementById("output").style.color = "red";
+    document.getElementById("output").style.backgroundColor = "yellow";
+</script>
+
+</html>
